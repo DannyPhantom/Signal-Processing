@@ -32,6 +32,7 @@ AudioFile *TimeDomainConvolver::convolve(AudioFile *dryFile, AudioFile *irFile) 
 	std::vector<double> h = irFile->getData();
 
 	int resultSize = x.size() + h.size() - 1;
+	std::cout << resultSize;
 	double *result = new double[resultSize];
 	for (int i=0; i<resultSize; i++) {
 		result[i] = 0.0;

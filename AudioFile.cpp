@@ -44,8 +44,6 @@ void AudioFile::normalizeData() {
 		}
 	}
 
-	std::cout << maxSignal << std::endl;
-
 	if (maxSignal > 1.0) {
 		for (int i=0; i < data.size(); i++) {
 			data[i] = data[i] / maxSignal;

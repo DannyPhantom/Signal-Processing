@@ -16,6 +16,12 @@ AudioFile *WAVEAudioFileReader::readFromFile(char *fileName) {
 	AudioFile *file = new AudioFile();
 
 	FILE * infile = fopen(fileName, "rb");
+
+	if (!infile) {
+		std::cout << "Could not open the file " << fileName << std::endl;
+		exit(-1);
+	}
+
 	header_file* meta = (header_file*)malloc(sizeof(header));
 	fread(meta, 1, sizeof(header), infile);
 

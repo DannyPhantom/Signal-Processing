@@ -1,21 +1,20 @@
 /*
- * FrequencyDomainConvolver.h
+ * FrequencyDomainConvolverO5.h
  *
- *  Created on: Dec 8, 2016
- *      Author: igor.sarcovschi
+ *  Created on: 2016-12-09
+ *      Author: dannyphantom
  */
 
-#ifndef FREQUENCYDOMAINCONVOLVER_H_
-#define FREQUENCYDOMAINCONVOLVER_H_
+#ifndef FREQUENCYDOMAINCONVOLVERO5_H_
+#define FREQUENCYDOMAINCONVOLVERO5_H_
 
 #include <vector>
-
 class AudioFile;
 
-class FrequencyDomainConvolver {
+class FrequencyDomainConvolverO5 {
 public:
-	FrequencyDomainConvolver();
-	virtual ~FrequencyDomainConvolver();
+	FrequencyDomainConvolverO5();
+	virtual ~FrequencyDomainConvolverO5();
 
 	AudioFile *convolve(AudioFile *dryFile, AudioFile *irFile);
 
@@ -26,4 +25,4 @@ private:
 	double *zeroPad(double *array, int currentSize, int wantedSize);
 };
 
-#endif /* FREQUENCYDOMAINCONVOLVER_H_ */
+#endif /* FREQUENCYDOMAINCONVOLVERO5_H_ */
